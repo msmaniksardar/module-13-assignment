@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:module_13_assignment/pages/card_design.dart';
+import 'package:module_13_assignment/pages/add_product.dart';
+import 'package:module_13_assignment/pages/product_list_screen.dart';
 
 void main(){
   runApp(MyApp());
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: CardDesign(),
+      home: AddProduct(),
     );
   }
 }
