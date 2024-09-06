@@ -12,6 +12,12 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       home: AddProduct(),
+      /* To create a dynamic data use add product
+       and show it another page with your requirement
+       please consider it for the first time. to see the product click
+        on the left bottom action button but at first
+       you have to add product
+       */
     );
   }
 }

@@ -138,6 +138,7 @@ class _AddProductState extends State<AddProduct> {
           ),
         ),
       ),
+          floatingActionButton: FloatingActionButton(onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=> ProductListScreen(productList: ProductList,)));} , child: Icon(Icons.show_chart),),
     ));
   }
 
@@ -158,6 +159,10 @@ class _AddProductState extends State<AddProduct> {
           builder: (context) => ProductListScreen(productList: ProductList),
         ),
       );
+      _productNameTEController.clear();
+      _productColorTEController.clear();
+      _productSizeTEController.clear();
+      _productPriceTEController.clear();
     }
   }
 
@@ -166,6 +171,16 @@ class _AddProductState extends State<AddProduct> {
       return 'This field cannot be empty'; // Return an error message if the field is empty.
     }
     return null; // Return null if the input is valid.
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _productNameTEController.dispose();
+    _productColorTEController.dispose();
+    _productSizeTEController.dispose();
+    _productPriceTEController.dispose();
   }
 }
 
@@ -185,3 +200,5 @@ class Products {
       required this.listOfProduct,
       this.quantity = 1});
 }
+
+

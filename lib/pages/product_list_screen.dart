@@ -183,7 +183,9 @@ class _ProductListScreenState extends State<ProductListScreen> {
           child: SizedBox(
             width: double.maxFinite,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text("Congratulation")));
+              },
               child: Text("CHECK OUT"),
             ),
           ),
